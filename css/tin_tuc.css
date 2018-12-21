@@ -1,0 +1,72 @@
+.tin_tuc{
+	width:740px;
+	min-height:500px;
+	display:block;
+	border-bottom:1px dotted #CCC;
+	padding:20px 0px 30px 0px;
+	margin-right:10px;
+	margin-left:5px;
+}
+#title{
+	border-bottom:1px dotted #CCC;
+	font-size:1.6em;
+	width:90%;
+	margin-top:10px;
+	margin-left:20px;
+}
+.tin_tuc > h1{
+	font-size:1.8em;
+	min-height:40px;
+}
+.tin_tuc > h5{
+	height:20px;
+}
+.tin_tuc > h4{
+	height:10px;
+	margin-right:10px;
+	float:right;
+}
+.tin_tuc > a > img{
+	position:relative;
+	margin:10px 100px;
+}
+.tin_tuc > p{
+	font-size:12px;
+	text-align:justify;
+	height:70px;
+	margin-top:10px;
+	overflow:hidden;
+}
+.tin_tuc > .main_news{
+	width:100%;
+	text-align:justify;
+	margin-top:30px;
+}
+.page{
+	margin:20px 0px 0px 300px;
+}
+.page > a{
+	min-width:15px;
+	height:15px;
+	display:inline-block;
+	text-align:center;
+	line-height:15px;
+}
+.tin_khac{
+	margin-top:25px;
+	margin-bottom:50px;
+}
+.tin_khac > h4{
+	
+}
+.tin_khac > ul{
+	margin-left:70px;
+}
+.tin_khac > ul > li{
+	height:15px;
+	font-size:11px;
+	color:#ccc;
+}
+.tin_khac > ul > li >a{
+	margin-right:15px;
+}

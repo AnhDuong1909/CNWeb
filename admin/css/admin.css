@@ -1,0 +1,223 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+body{
+	font-family:Arial, Helvetica, sans-serif;
+}
+.main{
+	width:1000px;
+	min-height:400px;
+	margin:50px auto;
+	border:1px solid;
+	display:block;
+	background:#4B4B4B;
+}
+a{
+	text-decoration:none;
+}
+.left{
+	width:250px;
+	float:left;
+	height:auto;
+}
+ul{
+	list-style:none;
+	width:250px;
+}
+ul > li{
+	padding-left:50px;
+	height:40px;
+	line-height:40px;
+	position:relative;
+}
+ul > li > ul{
+	display:block;
+	opacity:0;
+	position:absolute;
+	width:200px;
+	background:#4B4B4B;
+	-webkit-border-top-right-radius:10px;
+	-webkit-border-bottom-right-radius:10px;
+	-webkit-transition:0.5s ease-in-out;
+	left:0px;
+}
+li:hover ul{
+	opacity:0.7;
+	top:0px;
+	left:250px;
+}
+li:hover{
+	background:#FFF;
+}
+li > a{
+	color:#ccc;
+	text-decoration:none;
+}
+
+
+.right{
+	width:750px;
+	display:inline-block;
+	min-height:400px;
+	padding-bottom:30px;
+	background:#FFF;
+}
+.right > h3{
+	height:30px;
+	margin:15px;
+	text-align:center;
+}
+.thao_tac{
+	padding-left:170px;
+}
+.thao_tac > h4{
+	height:30px;
+	width:200px;
+	display:inline-block;
+	text-align:center;
+}
+
+form{
+	margin:0px auto;
+	width:100%;
+	padding:10px 0px;
+}
+.rows{
+	min-height:30px;
+	overflow:auto;
+}
+label{
+	width:150px;
+	display:inline-block;
+	margin-left:20px;
+	vertical-align:top;
+}
+input[type="text"]{
+	width:250px;
+	height:20px;
+	margin-bottom:5px;
+}
+input[type="date"]{
+	width:150px;
+	height:auto;
+	margin-bottom:5px;
+}
+input[type="submit"]{
+	width:100px;
+	height:25;
+	margin-top:20px;
+}
+textarea{
+	width:450px;
+	height:75px;
+	resize:none;
+}
+select{
+	width:200px;
+	height:25px;
+}
+select[name="hot"]{
+	width:40px;
+	height:25px;
+}
+#km{
+	display:none;
+}
+#km > label{
+	width:125px;
+	display:inline-block;
+	margin-left:45px;
+}
+#dangnhap{
+	margin:20px auto;
+	text-align:center;
+}
+.top_dn{
+	width:100%;
+	height:100px;
+	
+}
+#menu_tk ul{
+	width:400px;
+	margin:10px auto;
+}
+#menu_tk li{
+	float:right;
+	display:inline-block;
+	padding:0px 50px 0px 0px;
+}
+#menu_tk a{
+	color:#006;
+}
+#menu_tk h3{
+	margin:0px auto;
+	display:block;
+	text-align:center;
+}
+
+table{
+	margin:0px auto;
+	margin-bottom:20px;
+}
+tr{
+	height:40px;
+}
+td{
+	text-align:center;
+}
+td img{
+	height:50px;
+}
+td a > img{
+	height:20px;
+}
+.page{
+	margin:20px 0px 0px 300px;
+}
+.page > a{
+	min-width:15px;
+	height:15px;
+	display:inline-block;
+	text-align:center;
+	line-height:15px;
+}
+
+
+.dang_nhap form{
+	border:1px solid;
+	width:500px;
+	margin:100px auto;
+	padding-bottom:20px;
+	padding-top:30px;
+	background:#EEF7EE;
+}
+.dang_nhap form > h3{
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.4em;
+	padding-bottom:20px;
+}
+.dang_nhap form > h5{
+	margin-left:70px;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-bottom:20px;
+}
+
+.dang_nhap .rows{
+	min-height:35px;
+}
+.dang_nhap form > .rows label{
+	width: 100px;
+	display:inline-block;
+	margin-left:50px;
+}
+.dang_nhap input{
+	width:200px;
+	height:20px;
+}
+.dang_nhap input[type="submit"]{
+	width:100px;
+	height:20px;
+	margin-left:25px;
+}

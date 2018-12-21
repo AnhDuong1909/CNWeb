@@ -1,0 +1,27 @@
+<!-- BEGIN: san_pham -->
+    <div class="content_main_block">
+    <!-- BEGIN: block -->
+        <h4><a href="index.php?act={act}">{title}</a></h4>
+        <div class="content_main_block_list">
+        <!-- BEGIN: list_sp -->
+            <div class="content_main_block_list_sp">
+                <a href="index.php?act=chitiet_sp&id_sp={id_sp}"><img src="img/dienthoai/{anh_sp}"></a>
+                <h4>{ten_sp}</h4>
+                <h6>{gia_sp}</h6>
+            </div>
+      	<!-- END: list_sp -->
+        	<div class="content_main_block_list_next">
+                <h4><a href="index.php?act={act}">{end}</a></h4>
+            </div>
+        </div>
+        <div class="page">
+        <!-- BEGIN: so_trang --> 
+            <a href="index.php?act={act}&page={stt}" style="background:{page};" >{stt}</a>
+        <!-- END: so_trang -->
+        </div>
+        <!-- BEGIN: sotrang -->
+        <a href="index.php?act={act}&page={stt}">{stt}</a>
+    	<!-- END: sotrang -->
+   	<!-- END: block -->
+    </div>
+<!-- END: san_pham -->

@@ -1,0 +1,67 @@
+<!-- BEGIN: tai_khoan -->
+	<div id="menu_tk">
+    	<div class="top_dn">
+    	<ul>
+        	<li><a href="index.php?tk=thoat">Thoát</a></li>
+            <li><a href="index.php?act=doi_mk">Đổi mật khẩu</a></li>
+			<li><a href="index.php?act=dang_ki">Thêm tài khoản</a></li>
+        </ul>
+        </div>
+    	<h3>{title}</h3>
+    </div>
+<!-- END: tai_khoan -->
+<!-- BEGIN: doi_mk -->
+	<div class="dang_nhap">
+        <form name="frm" action="index.php?tk=doi_mk" method="post">
+            <h3>ĐỔI MẬT KHẨU</h3>
+            <div class="rows">
+            <label>Mật khẩu cũ</label><input type="password" name="pass1">
+            </div>
+            <div class="rows">
+            <label>Mật khẩu mới</label><input type="password" name="pass2">
+            </div>
+            <div class="rows">
+            <label>Nhập lại</label><input type="password" name="pass3">
+            </div>
+            <input type="hidden" name="dangnhap" value="ok">
+            <div class="rows">
+            <label></label><input type="submit" name="submit">
+            </div>
+        </form>
+    </div>
+<!-- END: doi_mk -->
+<!-- BEGIN: dang_ki -->
+	<div class="dang_nhap">
+        <form name="frm" action="index.php?tk=regi" method="post">
+            <h3>ĐĂNG KÍ</h3>
+            <div class="rows">
+            <label>Tài khoản</label><input type="text" name="user">
+            </div>
+            <div class="rows">
+            <label>Mật khẩu</label><input type="password" name="pass2">
+            </div>
+            <div class="rows">
+            <label>Nhập lại</label><input type="password" name="pass3">
+            </div>
+            <h5>Thông tin cái nhân</h5>
+            <div class="rows">
+            <label>Họ tên</label><input type="text" name="ho_ten">
+            </div>
+            <div class="rows">
+            <label>Ngày sinh</label><input type="date" name="ngay_sinh">
+            </div>
+            <div class="rows">
+            <label>Địa chỉ</label><input type="text" name="dia_chi">
+            </div>
+            <div class="rows">
+            <label>Số điện thoại</label><input type="text" name="sdt">
+            </div>
+            <div class="rows">
+            <label>Email</label><input type="email" name="email">
+            </div>
+            <div class="rows">
+            <label></label><input type="submit" name="submit">
+            </div>
+        </form>
+    </div>
+<!-- END: dang_ki -->

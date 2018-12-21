@@ -1,0 +1,31 @@
+footer{
+	width:100%;
+	display:block;
+	background:#000;
+	color:#FFF;
+}
+.div1{
+	
+}
+.div1 > a > img{
+	width:260px;
+	margin:20px 20px;
+}
+.div2{
+	display:inline-block;
+	vertical-align:top;
+	font-size:12px;
+	margin:25px 5px 15px 15px;
+}
+.div3{
+	display:inline-block;
+	font-size:12px;
+	margin:20px 0px 15px 15px;
+}
+.div3 > ul{
+	margin-left:14px;
+}
+.div4{
+	height:30px;
+	text-align:center;
+}

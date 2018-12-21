@@ -1,0 +1,38 @@
+<!-- BEGIN: list_tt -->
+    <h1 id="title">TIN TỨC CÔNG NGHỆ</h1>
+    <!-- BEGIN: tin_tuc -->
+    <section class="tin_tuc">
+        <h1><a href="index.php?act=show_tt&id={id}">{tieu_de}</a></h1>
+        <h5>Ngày đăng:{ngay_dang}</h5>
+        <a href="index.php?act=show_tt&id={id}"><img src="img/tintuc/{anh_tt}"></a>
+        <p>{tom_tat}</p>
+        <h4><a href="index.php?act=show_tt&id={id}">Xem tiếp...</a></h4>
+    </section>
+    <!-- END: tin_tuc --> 
+         
+    <div class="page">
+    <!-- BEGIN: so_trang --> 
+        <a href="index.php?act=tintuc&page={stt}" style="background:{page};">{stt}</a>
+  	<!-- END: so_trang -->
+    </div>
+<!-- END: list_tt -->
+
+<!-- BEGIN: show_tt -->
+	<h1 id="title"><a href="index.php?act=tintuc">TIN TỨC CÔNG NGHỆ</a></h1>
+	<section class="tin_tuc">
+        <h1><a href="index.php?act=show_tt&id={id}">{tieu_de}</a></h1>
+        <h5>Ngày đăng:{ngay_dang}</h5>
+        <div class="main_news">
+        	{noi_dung}
+        </div>
+    </section>
+    
+    <section class="tin_khac">
+    	<h4>CÁC TIN KHÁC</h4>
+        <ul>
+        	<!-- BEGIN: tin_khac -->
+        	<li><a href="index.php?act=show_tt&id={id}">{tieu_de}</a>[ {ngay_dang} ]</li>
+            <!-- END: tin_khac -->
+        </ul>
+    </section>
+<!-- END: show_tt -->

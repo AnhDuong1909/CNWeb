@@ -1,0 +1,87 @@
+<!-- BEGIN: chitiet_spk -->
+	<div class="content_main_block">
+    	<div class="top_ctsp">
+        	<h3>THÔNG TIN CHI TIẾT</h3>
+           	<div class="top_ctsp_left">
+        		<h3>{ten_spk}</h3>
+            	<img src="img/pk/{anh_spk}">
+                <h4>{gia_spk}</h4>
+                <p>Hàng chính hãng, giá đã bao gồm 10% VAT</p>
+                <button onclick="mo();">Mua Hàng</button>
+            </div>
+            <div class="top_ctsp_right">
+            	<table>
+            	<tr><th colspan="2">MỘT SỐ THÔNG TIN</th></tr>
+                <tr>
+                	<td class="title">Tình trạng</td><td>{tinh_trang}</td>
+                </tr>                
+                <tr>
+                	<td class="title">Màu sắc</td><td>{mau_sac}</td>
+                </tr>
+                <tr>
+                	<td class="title">Thiết kế</td><td>{thiet_ke}</td>
+                <tr>
+                	<td class="title">Sử dụng</td><td>{su_dung}</td>
+                </tr>
+                <tr>
+                	<td class="title">Bảo hành</td><td>{bao_hanh}</td>
+                </tr>
+                <tr>
+                	<td class="title">Xuất xứ</td><td>{xuat_xu}</td>
+                </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div id="mua_hang">
+            <form method="post" action="index.php?mh=spk" onsubmit="return check();" name="mua_hang">
+                <div class="close"><p onclick="dong();"></p></div>
+                <h3>MUA HÀNG</h3>
+                <i>Vui lòng cung cấp một số thông tin giao dịch, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhât</i>
+                <input type="text" name="ho_ten" placeholder="Nhập vào tên của bạn">
+                <input type="text" name="sdt" placeholder="Số điện thoại liên hệ">
+                <input type="text" name="dia_chi_nhan_hang" placeholder="Địa chỉ nhận hàng">
+                <input type="text" name="ghi_chu" placeholder="Ghi chú khác của bạn">
+                <input type="hidden" name="id_spk" value="{id_spk}">
+                <input type="hidden" name="ten_spk" value="{ten_spk}">
+                <input type="hidden" name="id_tbl" value="{id_tbl}">
+                <input type="submit" name="dat_mua" value="Đặt mua ngay">
+            </form>
+        </div>
+<script language="javascript">
+	function mo(){
+		var muahang = document.getElementById("mua_hang");
+		muahang.style.display="block";
+	}
+	function dong(){
+		var muahang = document.getElementById("mua_hang");
+		muahang.style.display="none";
+	}
+	function check(){
+		var hoten = document.mua_hang.ho_ten;
+		var sdt = document.mua_hang.sdt;
+		var dia_chi = document.mua_hang.dia_chi_nhan_hang;
+		if( (hoten.value=="") || (sdt.value=="") || (dia_chi.value=="") ){
+			alert("Bạn chưa hoàn thành thông tin");
+			return false;
+		}
+		else{
+			alert("Đăng kí mua hàng thành công");
+			return true;
+		}
+	}
+</script>
+        
+        <div class="thong_so">
+        	<h3>Một số hình ảnh</h3>
+            {anh1}
+            <p>{p1}</p>
+            {anh2}
+            <p>{p2}</p>
+            {anh3}
+            <p>{p3}</p>
+            {anh4}
+            <p>{p4}</p>
+		</div>
+    </div>
+<!-- END: chitiet_spk -->

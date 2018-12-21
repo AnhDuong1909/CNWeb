@@ -1,0 +1,81 @@
+<!-- BEGIN: edit_nsx -->
+	<h3>{title}</h3>
+	<form method="post" action="index.php?act={act}" enctype="multipart/form-data" name="chitiet_sp">
+        <div class="rows">
+            <label>Nhà sản xuất</label>
+            <input type="text" name="ten_nsx" value="{ten_nsx}">
+        </div>
+         <div class="rows">
+            <label>Sản xuất</label>
+            <input type="checkbox" name="dien_thoai" value="1" {dien_thoai}>Điện thoại
+            <input type="checkbox" name="may_tinh_bang" value="1" {may_tinh_bang}>Máy tính bảng
+        </div>
+        <div class="rows">
+            <label>Giới thiệu</label>
+            <textarea name="gioi_thieu">{gioi_thieu}</textarea>
+        </div>
+        <div class="rows">
+            <label></label>
+            <input type="submit" name="submit" value="submit">
+        </div>
+   	</form>
+<!-- END: edit_nsx -->
+<!-- BEGIN: list_nsx --><script language="javascript">
+	function checkall(){
+		var check_all = document.getElementById("check_all");
+		var check = document.getElementsByClassName("check");
+		if(check_all.checked==true) for(i=0;i<check.length;i++) check[i].checked=true;
+			else for(i=0;i<check.length;i++) check[i].checked=false;
+	}
+	function xoa_all(){
+		var obj = document.getElementsByName("check[]");
+		var isChecked=false;
+		for(i=0;i<obj.length;i++)	
+			if(obj[i].checked)
+			{
+				isChecked=true;
+			}	
+		if(!isChecked)
+		{
+			alert('Bạn chưa chọn mục nào');
+			return false;
+		}
+		else
+		{
+			document.frm.submit();
+			return true;
+		}
+	}
+</script>
+    <h3>{title}</h3>
+<form name="frm" method="post" action="index.php?act=del_all_nsx">
+    <div class="thao_tac">
+    	<h4><a href="index.php?act=nsx_add">Thêm NSX</a></h4>
+        <h4><a href="#" onclick="xoa_all()">Xóa mục đã chọn</a></h4>
+    </div>
+	<table width="550" border="1" cellspacing="0">
+    	<tr>
+        	<td width="50">STT</td>
+            <td width="150">Nhà sản xuất</td>
+            <td width="200">Giới thiệu</td>
+            <td colspan="2" width="100px">Thao tác</td>
+            <td width="50px"><input type="checkbox" id="check_all" name="check_all" onclick="checkall();">All</td>
+        </tr>
+ 	<!-- BEGIN: in_nsx -->
+    	<tr>
+        	<td>{stt}</td>
+            <td>{ten_nsx}</td>
+            <td>{gioi_thieu}</td>
+            <td width="50px"><a href="index.php?act=nsx_edit&id={id}"><img src="../img/Editing-Edit-icon.png"></a></td>
+            <td width="50px"><a href="index.php?act=del_nsx&id={id}"><img src="../img/black-white-metro-delete-icon.png"></a></td>
+            <td><input type="checkbox" name="check[]" value="{id}" class="check"></td>
+        </tr>
+    <!-- END: in_nsx -->
+    </table>
+    <div class="page">
+    <!-- BEGIN: so_trang --> 
+        <a href="index.php?act=nsx&page={stt}" style="background:{page};" >{stt}</a>
+  	<!-- END: so_trang -->
+    </div>
+</form>
+<!-- END: list_nsx -->

@@ -1,0 +1,95 @@
+<!-- BEGIN: tin_tuc -->
+	<script language="javascript">
+	function checkall(){
+		var check_all = document.getElementById("check_all");
+		var check = document.getElementsByClassName("check");
+		if(check_all.checked==true) for(i=0;i<check.length;i++) check[i].checked=true;
+			else for(i=0;i<check.length;i++) check[i].checked=false;
+	}
+	function xoa_all(){
+		var obj = document.getElementsByName("check[]");
+		var isChecked=false;
+		for(i=0;i<obj.length;i++)	
+			if(obj[i].checked)
+			{
+				isChecked=true;
+			}	
+		if(!isChecked)
+		{
+			alert('Bạn chưa chọn mục nào');
+			return false;
+		}
+		else
+		{
+			document.frm.submit();
+			return true;
+		}
+	}
+</script>
+    <h3>{title}</h3>
+<form name="frm" method="post" action="index.php?act=del_all_tt">
+    <div class="thao_tac">
+    	<h4><a href="index.php?act=tt_add">Thêm tin tức</a></h4>
+        <h4><a href="#" onclick="xoa_all()">Xóa mục đã chọn</a></h4>
+    </div>
+	<table width="650" border="1" cellspacing="0">
+    	<tr>
+        	<td width="50">STT</td>
+            <td width="300">Tiêu đề</td>
+            <td width="150">Ngày đăng</td>
+            <td colspan="2">Thao tác</td>
+            <td width="50px"><input type="checkbox" id="check_all" name="check_all" onclick="checkall();">All</td>
+        </tr>
+ 	<!-- BEGIN: list_tt -->
+    	<tr>
+        	<td>{stt}</td>
+            <td>{tieude}</td>
+            <td>{ngaydang}</td>
+            <td width="50px"><a href="index.php?act=tt_edit&id={id}"><img src="../img/Editing-Edit-icon.png"></a></td>
+            <td width="50px"><a href="index.php?act=del_tt&id={id}"><img src="../img/black-white-metro-delete-icon.png"></a></td>
+            <td><input type="checkbox" name="check[]" value="{id}" class="check"></td>
+        </tr>
+    <!-- END: list_tt -->
+    </table>
+    <div class="page">
+    <!-- BEGIN: so_trang --> 
+        <a href="index.php?act=sp&page={stt}" style="background:{page};" >{stt}</a>
+  	<!-- END: so_trang -->
+    </div>
+</form>
+<!-- END: tin_tuc -->
+
+
+<!-- BEGIN: edit_tt -->
+	<h3>{title}</h3>
+	<form method="post" action="index.php?act={act}" enctype="multipart/form-data" name="chitiet_sp">
+        <div class="rows">
+            <label>Tiêu đề</label>
+            <input type="text" name="tieu_de" value="{tieu_de}">
+        </div>
+        <div class="rows">
+            <label>Ảnh minh họa</label>
+            <input type="file" name="anh_tt" value="">
+        </div>
+        <div class="rows">
+            <label>Ngày đăng</label>
+            <input type="date" name="ngay_dang" value="{ngay_dang}">
+        </div>
+        <div class="rows">
+            <label>Tác giả</label>
+            <input type="text" name="tac_gia" value="{tac_gia}">
+        </div>
+        <div class="rows">
+            <label>Tóm tắt</label>
+            <textarea name="tom_tat" >{tom_tat}</textarea>
+        </div>
+        <div class="rows">
+            <label>Nội dung</label>
+            <textarea name="noi_dung" class="ckeditor">{noi_dung}</textarea>
+        </div>
+        <div class="rows">
+            <label></label>
+            <input type="submit" name="submit" value="Submit">
+        </div>
+   	</form>
+<!-- END: edit_tt -->

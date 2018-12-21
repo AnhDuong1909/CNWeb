@@ -1,0 +1,295 @@
+<!-- BEGIN: edit -->
+			<h3>{title}</h3>
+            <form method="post" action="index.php?act={act}" enctype="multipart/form-data" name="chitiet_sp">
+                <div class="rows">
+                    <label>Tên sản phẩm</label>
+                    <input type="text" name="ten_sp" value="{ten_sp}">
+                </div>
+                <div class="rows">
+                    <label>Giá sản phẩm</label>
+                    <input type="text" name="gia_sp" value="{gia_sp}">
+                </div>
+                <div class="rows">
+                    <label>Ảnh</label>
+                    <input type="file" name="anh_sp" value="">
+                </div>
+                <div class="rows">
+                    <label>Nhà sản xuất</label>
+                    <select name="nsx">
+                    	<option>Nhà sản xuất</option>
+                   	<!-- BEGIN: select_nsx -->
+                        <option value="{id}" {selected}>{ten_nsx}</option>
+                    <!-- END: select_nsx -->
+                    </select>
+                </div>
+                <div class="rows">
+                    <label>Độ hot</label>
+                    <select name="hot">
+                   	<!-- BEGIN: hot -->
+                        <option value="{hot}" {selected}>{hot}</option>
+                    <!-- END: hot -->
+                    </select>
+                </div>
+                <div class="rows">
+                    <label>Khuyến mãi</label>
+                    <input type="checkbox" name="khuyen_mai" onclick="km()" {km}>
+                    <div id="km">
+                        <label>Giá</label>
+                        <input type="text" name="gia_km" value="{gia_km}"><br>
+                        <label>Bắt đầu</label>
+                        <input type="date" name="batdau_km" value="{batdau_km}"><br>
+                        <label>Kết thúc</label>
+                        <input type="date" name="ketthuc_km" value="{ketthuc_km}">
+                    </div>
+                </div>
+                <div class="rows">
+                    <label>Mạng 2G</label>
+                    <input type="text" name="mang_2g" value="{mang_2g}">
+                </div>
+                <div class="rows">
+                    <label>Mạng 3G</label>
+                    <input type="text" name="mang_3g" value="{mang_3g}">
+                </div>
+                <div class="rows">
+                    <label>Ngày ra mắt</label>
+                    <input type="date" name="ra_mat" value="{ra_mat}">
+                </div>
+                <div class="rows">
+                    <label>Ngày có hàng</label>
+                    <input type="date" name="co_hang" value="{co_hang}">
+                </div>
+                <div class="rows">
+                    <label>Kích thước</label>
+                    <input type="text" name="kich_thuoc" value="{kich_thuoc}">
+                </div>
+                <div class="rows">
+                    <label>Trọng lượng</label>
+                    <input type="text" name="trong_luong" value="{trong_luong}">
+                </div>
+                <div class="rows">
+                    <label>Loại màn hình</label>
+                    <input type="text" name="loai_mh" value="{loai_mh}">
+                </div>
+                <div class="rows">
+                    <label>Kích thước MH</label>
+                    <input type="text" name="kich_thuoc_mh" value="{kich_thuoc_mh}">
+                </div>
+                <div class="rows">
+                    <label>Khác</label>
+                    <textarea name="khac_mh">{khac_mh}</textarea>
+                </div>
+                <div class="rows">
+                    <label>Kiểu chuông</label>
+                    <input type="text" name="kieu_chuong" value="{kieu_chuong}">
+                </div>
+                <div class="rows">
+                    <label>Jack 3.5 mm</label>
+                    <input type="checkbox" name="jack35mm" value="1" {jack35mm}>
+                </div>
+                <div class="rows">
+                    <label>Danh bạ</label>
+                    <input type="text" name="danh_ba" value="{danh_ba}">
+                </div>
+                <div class="rows">
+                    <label>Các số đã gọi</label>
+                    <input type="text" name="nhat_ky" value="{nhat_ky}">
+                </div>
+                <div class="rows">
+                    <label>Bộ nhớ</label>
+                    <input type="text" name="bo_nho" value="{bo_nho}">
+                </div>
+                <div class="rows">
+                    <label>ram</label>
+                    <input type="text" name="ram" value="{ram}">
+                </div>
+                <div class="rows">
+                    <label>Thẻ nhớ</label>
+                    <input type="text" name="the_nho" value="{the_nho}">
+                </div>
+                <div class="rows">
+                    <label>GPRS</label>
+                    <input type="checkbox" name="gprs" value="1" {gprs}>
+                </div>
+                <div class="rows">
+                    <label>EDGE</label>
+                    <input type="text" name="edge" value="{edge}">
+                </div>
+                <div class="rows">
+                    <label>Tốc độ 3G</label>
+                    <input type="text" name="3g" value="{3g}">
+                </div>
+                <div class="rows">
+                    <label>NFC</label>
+                    <input type="checkbox" name="nfc" value="1" {nfc}>
+                </div>
+                <div class="rows">
+                    <label>WLAN</label>
+                    <input type="text" name="wlan" value="{wlan}">
+                </div>
+                <div class="rows">
+                    <label>Bluetooth</label>
+                    <input type="text" name="bluetooth" value="{bluetooth}">
+                </div>
+                <div class="rows">
+                    <label>Hồng ngoại</label>
+                    <input type="checkbox" name="hong_ngoai" value="1" {hong_ngoai}>
+                </div>
+                <div class="rows">
+                    <label>USB</label>
+                    <input type="text" name="usb" value="{usb}">
+                </div>
+                <div class="rows">
+                    <label>Camere chính</label>
+                    <input type="text" name="camera_chinh" value="{camera_chinh}">
+                </div>
+                <div class="rows">
+                    <label>Camere phụ</label>
+                    <input type="text" name="camera_phu" value="{camera_phu}">
+                </div>
+                <div class="rows">
+                    <label>Quay phim</label>
+                    <input type="text" name="quay_phim" value="{quay_phim}">
+                </div>
+                <div class="rows">
+                    <label>Đặc điểm Camera</label>
+                    <input type="text" name="dac_diem_camera" value="{dac_diem_camera}">
+                </div>
+                <div class="rows">
+                    <label>Hệ điều hành</label>
+                    <input type="text" name="he_dieu_hanh" value="{he_dieu_hanh}">
+                </div>
+                <div class="rows">
+                    <label>Bộ xử lý</label>
+                    <input type="text" name="bo_xu_ly" value="{bo_xu_ly}">
+                </div>
+                <div class="rows">
+                    <label>Chipset</label>
+                    <input type="text" name="chipset" value="{chipset}">
+                </div>
+                <div class="rows">
+                    <label>Tin nhắn</label>
+                    <input type="text" name="tin_nhan" value="{tin_nhan}">
+                </div>
+                <div class="rows">
+                    <label>Trình duyệt</label>
+                    <input type="text" name="trinh_duyet" value="{trinh_duyet}">
+                </div>
+                <div class="rows">
+                    <label>Radio</label>
+                    <input type="text" name="radio" value="{radio}">
+                </div>
+                <div class="rows">
+                    <label>Trò chơi</label>
+                    <input type="text" name="tro_choi" value="{tro_choi}">
+                </div>
+                <div class="rows">
+                    <label>Màu sắc</label>
+                    <input type="text" name="mau_sac" value="{mau_sac}">
+                </div>
+                <div class="rows">
+                    <label>Ngôn ngữ</label>
+                    <input type="text" name="ngon_ngu" value="{ngon_ngu}">
+                </div>
+                <div class="rows">
+                    <label>Định vị</label>
+                    <input type="text" name="dinh_vi" value="{dinh_vi}">
+                </div>
+                <div class="rows">
+                    <label>Java</label>
+                    <input type="text" name="java" value="{java}">
+                </div>
+                <div class="rows">
+                    <label>Đặc điểm khác</label>
+                    <textarea name="khac_dd">{khac_dd}</textarea>
+                </div>
+                <div class="rows">
+                    <label>Loại pin</label>
+                    <input type="text" name="loai_pin" value="{loai_pin}">
+                </div>
+                <div class="rows">
+                    <label>Thời gian chờ</label>
+                    <input type="text" name="time_cho" value="{time_cho}">
+                </div>
+                <div class="rows">
+                    <label>Thời gian gọi</label>
+                    <input type="text" name="time_goi" value="{time_goi}">
+                </div>
+                
+                <div class="rows">
+                    <label></label>
+                    <input type="submit" name="submit" value="submit">
+                </div>
+            </form>
+<script language="javascript">
+	function km(){
+		if(document.chitiet_sp.khuyen_mai.checked == true) document.getElementById("km").style.display="block";
+		else document.getElementById("km").style.display="none";
+	}
+</script>
+<!-- END: edit -->
+
+
+
+
+<!-- BEGIN: list_sp -->
+<script language="javascript">
+	function checkall(){
+		var check_all = document.getElementById("check_all");
+		var check = document.getElementsByClassName("check");
+		if(check_all.checked==true) for(i=0;i<check.length;i++) check[i].checked=true;
+			else for(i=0;i<check.length;i++) check[i].checked=false;
+	}
+	function xoa_all(){
+		var obj = document.getElementsByName("check[]");
+		var isChecked=false;
+		for(i=0;i<obj.length;i++)	
+			if(obj[i].checked)
+			{
+				isChecked=true;
+			}	
+		if(!isChecked)
+		{
+			alert('Bạn chưa chọn mục nào');
+			return false;
+		}
+		else
+		{
+			document.frm.submit();
+			return true;
+		}
+	}
+</script>
+    <h3>{title}</h3>
+<form name="frm" method="post" action="index.php?act=del_all_sp">
+    <div class="thao_tac">
+    	<h4><a href="index.php?act=sp_add">Thêm sản phẩm</a></h4>
+        <h4><a href="#" onclick="xoa_all()">Xóa mục đã chọn</a></h4>
+    </div>
+    <table width="650px" border="1" cellspacing="0">
+        <tr>
+            <td width="50px">STT</td>
+            <td width="170px">Tên Sản phẩm</td>
+            <td width="125px">Giá Sản phẩm</td>
+            <td width="150px">Ảnh đại diện</td>
+            <td colspan="2" width="100px">Thao tác</td>
+            <td width="50px"><input type="checkbox" id="check_all" name="check_all" onclick="checkall();">All</td>
+        </tr>
+    <!-- BEGIN: in_sp -->
+        <tr>
+            <td>{stt}</td>
+            <td>{ten_sp}</td>
+            <td>{gia_sp}</td>
+            <td><img src="../img/dienthoai/{anh_sp}"></td>
+            <td width="50px"><a href="index.php?act=sp_edit&id={id}"><img src="../img/Editing-Edit-icon.png"></a></td>
+            <td width="50px"><a href="index.php?act=del_sp&id={id}"><img src="../img/black-white-metro-delete-icon.png"></a></td>
+            <td><input type="checkbox" name="check[]" value="{id}" class="check"></td>
+        </tr>
+    <!-- END: in_sp -->
+    </table>
+    <div class="page">
+    <!-- BEGIN: so_trang --> 
+        <a href="index.php?act=sp&page={stt}" style="background:{page};" >{stt}</a>
+  	<!-- END: so_trang -->
+    </div>
+</form>
+<!-- END: list_sp -->
